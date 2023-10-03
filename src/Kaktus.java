@@ -1,6 +1,6 @@
 public class Kaktus extends Krukväxter {
 
-    public String hej = "Hej";
+
     public String vätska = "Mineralvatten";
 
     Kaktus(double höjd) {
