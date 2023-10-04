@@ -5,7 +5,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class PalmerTest {
 
-    Palmer p = new Palmer(300.1,"Bob");
+    Palmer p = new Palmer(300,"Bob");
     @Test
     void Räkning() {
 

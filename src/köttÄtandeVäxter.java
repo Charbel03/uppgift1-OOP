@@ -2,7 +2,7 @@ public class köttÄtandeVäxter extends Krukväxter implements Interface {
 
     public String vätska = "Proteindryck";
     köttÄtandeVäxter(double höjd, String namn) {
-        super(höjd, namn);
+        super(höjd, namn,Enheter.LITER);
     }
 
 

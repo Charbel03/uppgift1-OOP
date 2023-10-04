@@ -2,7 +2,7 @@ public class Palmer extends Krukväxter implements Interface{
 
     public String vätska = "Kranvatten";
     Palmer(double höjd,String namn){
-        super(höjd,namn);
+        super(höjd,namn,Enheter.LITER);
     }
 
     public double Räkning(){
@@ -14,6 +14,7 @@ public class Palmer extends Krukväxter implements Interface{
     public String vätska() {
         return this.vätska;
     }
+
 
 
 

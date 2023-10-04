@@ -2,7 +2,8 @@ public class Kaktus extends Krukväxter implements Interface {
 
 
     Kaktus(double höjd, String namn) {
-        super(höjd,namn);
+        super(höjd,namn,Enheter.CENTILITER);
+
     }
 
     @Override
