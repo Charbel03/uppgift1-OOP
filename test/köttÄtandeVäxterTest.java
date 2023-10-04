@@ -7,7 +7,7 @@ class köttÄtandeVäxterTest {
 
     köttÄtandeVäxter k = new köttÄtandeVäxter(50,"Bob");
     @Test
-    void räkning2() {
+    void räkning() {
 
         double ExpectedValue = 0.2;
         double ActualValue = k.Räkning();

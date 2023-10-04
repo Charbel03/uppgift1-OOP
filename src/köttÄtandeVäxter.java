@@ -1,4 +1,4 @@
-public class köttÄtandeVäxter extends Krukväxter {
+public class köttÄtandeVäxter extends Krukväxter implements Interface {
 
     public String vätska = "Proteindryck";
     köttÄtandeVäxter(double höjd, String namn) {
@@ -12,5 +12,8 @@ public class köttÄtandeVäxter extends Krukväxter {
     }
 
 
-
+    @Override
+    public String vätska() {
+        return this.vätska;
+    }
 }

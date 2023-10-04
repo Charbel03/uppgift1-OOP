@@ -1,7 +1,5 @@
-public class Kaktus extends Krukväxter {
+public class Kaktus extends Krukväxter implements Interface {
 
-
-    public String vätska = "Mineralvatten";
 
     Kaktus(double höjd, String namn) {
         super(höjd,namn);
@@ -10,6 +8,11 @@ public class Kaktus extends Krukväxter {
     @Override
     public double Räkning() {
         return  2;
+    }
+
+    @Override
+    public String vätska() {
+        return "Mineralvatten";
     }
 
 

@@ -4,9 +4,8 @@ import java.util.List;
 
 
 enum växter{
-    Palmer,
-    köttÄtandeVäxter,
-    Kaktus;
+    LITER,
+    CENTILITER,
 }
 
 public class Main {
@@ -23,23 +22,25 @@ public class Main {
         krukväxter.add( new Palmer(100,"Olof") );
 
 
-
             while (!found) {
-                String krukväxt = JOptionPane.showInputDialog(null, "Vilken växt ska få mat?");
+                String krukväxtNamn = JOptionPane.showInputDialog(null, "Vilken växt ska få mat?");
 
-                if (krukväxt == null){
+                if (krukväxtNamn == null){
                     break;
                 }
 
                 for (Krukväxter x: krukväxter){
-                    if (x.GetNamn().equalsIgnoreCase(krukväxt)){
-                        JOptionPane.showMessageDialog(null, "Växten ska matas: "+ x.Räkning());
+                    if (x.GetNamn().equalsIgnoreCase(krukväxtNamn.trim())){
+                        JOptionPane.showMessageDialog(null, "Växten ska matas: "+
+                                x.Räkning() +
+                                        "\nVätska: "+ x.vätska() );
                         found = true;
                         break;
                     }
                 }
                 if (!found){
-                    JOptionPane.showMessageDialog(null,"Ingen växt hittades med namnet: " + krukväxt);
+                    JOptionPane.showMessageDialog(null,"Ingen växt hittades med namnet: " +
+                            krukväxtNamn + "\nFörsök igen!");
                 }
             }
     }

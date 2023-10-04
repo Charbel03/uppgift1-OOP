@@ -1,4 +1,4 @@
-public class Palmer extends Krukväxter{
+public class Palmer extends Krukväxter implements Interface{
 
     public String vätska = "Kranvatten";
     Palmer(double höjd,String namn){
@@ -8,12 +8,12 @@ public class Palmer extends Krukväxter{
     public double Räkning(){
 
         return (this.höjd /100) * 0.5;
-                /*"Växten ska matas " + (this.höjd /100) * 0.5 + " Liter/dag\n" +
-                "Vätska: " + this.vätska;
-
-                 */
     }
 
+    @Override
+    public String vätska() {
+        return this.vätska;
+    }
 
 
 

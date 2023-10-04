@@ -1,24 +1,23 @@
 public class Krukväxter implements Interface{
     double höjd;
     String namn;
-    String vätska = "Vatten";
-
     Krukväxter(double höjd,String namn){
         this.höjd = höjd;
         this.namn = namn;
     }
 
-
-    public double Räkning() {
-        return 2;
+    public String GetNamn(){
+        return this.namn;
     }
 
     @Override
     public String vätska() {
-        return null;
+        return "Vatten";
     }
 
-    public String GetNamn(){
-        return this.namn;
+    @Override
+    public double Räkning() {
+        return 1;
     }
+
 }
