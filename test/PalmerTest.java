@@ -1,8 +1,6 @@
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 class PalmerTest {
 
     Palmer p = new Palmer(300,"Bob");
@@ -12,6 +10,7 @@ class PalmerTest {
         double ExpectedValue = 1.5;
         double ActualValue = p.Räkning();
 
+        //kollar om räkningen stämmer
         Assertions.assertEquals(ExpectedValue,ActualValue);
     }
 }

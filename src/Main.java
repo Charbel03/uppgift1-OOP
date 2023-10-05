@@ -1,5 +1,4 @@
 import javax.swing.*;
-import java.lang.module.FindException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -8,21 +7,21 @@ enum Enheter{
     LITER("Liter"),
     CENTILITER("Centiliter");
 
-    final String enhet;
-    Enheter(String enhet) {
-        this.enhet = enhet;
+    final String liter;
+    Enheter(String liter) {
+        this.liter = liter;
 
     }
 }
 
 public class Main {
 
-
     public static void main(String[] args) {
         boolean found = false;
 
-        List<Krukväxter> krukväxter = new ArrayList<>();
 
+        List<Krukväxter> krukväxter = new ArrayList<>();
+        // skapar växterna genom en ArrayList
         krukväxter.add( new Kaktus(20,"Igge"));
         krukväxter.add( new Palmer(500,"Laura"));
         krukväxter.add( new köttÄtandeVäxter(70,"MeatLoaf"));
@@ -32,15 +31,17 @@ public class Main {
             while (!found) {
                 String krukväxtNamn = JOptionPane.showInputDialog(null, "Vilken växt ska få mat?");
 
+                //om användaren trycker på cancel
                 if (krukväxtNamn == null){
                     break;
                 }
 
-                for (Krukväxter x: krukväxter){
-                    if (x.GetNamn().equalsIgnoreCase(krukväxtNamn.trim())){
+                //här så kollas om det användaren skrev in är faktiskt en växt
+                for (Krukväxter krukväxt1: krukväxter){
+                    if (krukväxt1.GetNamn().equalsIgnoreCase(krukväxtNamn.trim())){
                         JOptionPane.showMessageDialog(null, "Växten ska matas: "+
-                                x.Räkning()  + " " + x.enhet.enhet + "/Dag" +
-                                        "\nVätska: "+ x.vätska() );
+                                krukväxt1.Räkning()  + " " + krukväxt1.enhet.liter + "/Dag" +
+                                        "\nVätska: "+ krukväxt1.vätska() );
                         found = true;
                         break;
                     }

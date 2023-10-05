@@ -1,8 +1,6 @@
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 class köttÄtandeVäxterTest {
 
     köttÄtandeVäxter k = new köttÄtandeVäxter(50,"Bob");
@@ -12,6 +10,7 @@ class köttÄtandeVäxterTest {
         double ExpectedValue = 0.2;
         double ActualValue = k.Räkning();
 
+        //kollar om räkningen stämmer
         Assertions.assertEquals(ExpectedValue,ActualValue);
     }
 }

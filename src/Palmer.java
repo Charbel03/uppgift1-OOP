@@ -1,7 +1,8 @@
 public class Palmer extends Krukväxter implements Interface{
+// Ärver från superklassen krukväxter och implementerar från interfacen
 
-    public String vätska = "Kranvatten";
-    Palmer(double höjd,String namn){
+    private String vätska = "Kranvatten";
+    Palmer(double höjd,String namn){ // konstruktör
         super(höjd,namn,Enheter.LITER);
     }
 

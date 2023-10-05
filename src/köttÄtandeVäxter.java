@@ -1,7 +1,8 @@
 public class köttÄtandeVäxter extends Krukväxter implements Interface {
+// Ärver från superklassen krukväxter och implementerar från interfacen
 
-    public String vätska = "Proteindryck";
-    köttÄtandeVäxter(double höjd, String namn) {
+    private String vätska = "Proteindryck";
+    köttÄtandeVäxter(double höjd, String namn) { // konstruktör
         super(höjd, namn,Enheter.LITER);
     }
 

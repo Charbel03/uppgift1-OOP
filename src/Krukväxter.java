@@ -1,12 +1,16 @@
 public class Krukväxter implements Interface{
+    // implementerar från interfacen
+
+    private String vätska = "Vatten";
+
     Enheter enhet;
     double höjd;
     String namn;
-    Krukväxter(double höjd,String namn,Enheter enhet){
+
+    Krukväxter(double höjd,String namn,Enheter enhet){ // konstruktör
         this.höjd = höjd;
         this.namn = namn;
         this.enhet = enhet;
-
     }
 
     public String GetNamn(){
@@ -15,12 +19,12 @@ public class Krukväxter implements Interface{
 
     @Override
     public String vätska() {
-        return "Vatten";
+        return this.vätska;
     }
 
     @Override
     public double Räkning() {
-        return 1;
+        return 2;
     }
 
 
